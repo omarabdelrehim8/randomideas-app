@@ -1,0 +1,20 @@
+const mongoose = require("mongoose");
+
+const IdeaSchema = mongoose.Schema({
+  text: {
+    type: String,
+    required: [true, "Please enter a text field"],
+  },
+  tag: {
+    type: String,
+  },
+  username: {
+    type: String,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+module.exports = mongoose.model("Idea", IdeaSchema);
