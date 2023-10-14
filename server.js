@@ -25,10 +25,6 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => {
-  res.send({ success: true, message: "Welcome to RandomIdeas API" });
-});
-
 app.use("/api/ideas", ideasRouter);
 
 app.use(express.static(path.join(__dirname, "public")));
