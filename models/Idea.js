@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const IdeaSchema = mongoose.Schema({
+const IdeaSchema = new mongoose.Schema({
   text: {
     type: String,
     required: [true, "Please enter a text field"],
